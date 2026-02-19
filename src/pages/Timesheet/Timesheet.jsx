@@ -36,7 +36,7 @@ export default function Timesheet() {
   };
 
   const handleSort = (key) => {
-  setSortConfig((prev) => {]
+  setSortConfig((prev) => {
     if (!prev || prev.key !== key) {
       return { key, direction: "asc" };
     }
