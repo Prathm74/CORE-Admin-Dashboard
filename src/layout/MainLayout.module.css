@@ -1,0 +1,82 @@
+.layout {
+  display: flex;
+  height: 100vh;
+  background: #f6f6f6;
+  position: relative;
+  margin: 10px;
+}
+
+/* MAIN RIGHT */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* PAGE CONTENT */
+.content {
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.05),
+    0 8px 18px rgba(0, 0, 0, 0.06);
+  border-radius: 22px;
+  margin-left: 10px;
+  margin-right: 5px;
+  background-color: #ffffff;
+  /* white ring like figma */
+
+}
+
+/* ================= OVERLAY ================= */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+
+  backdrop-filter: blur(4px);
+
+  z-index: 40;
+
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+  .content {
+    padding: 14px;
+  }
+}
+
+/* 🔥 SCROLLBAR WIDTH */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* 🔥 TRACK (background) */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 🔥 HANDLE (scroll thumb) */
+::-webkit-scrollbar-thumb {
+  background: #8a6c49;   /* तुझा theme brown */
+  border-radius: 20px;
+}
+
+/* 🔥 HOVER EFFECT */
+::-webkit-scrollbar-thumb:hover {
+  background: #6f5438;
+}

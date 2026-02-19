@@ -1,0 +1,189 @@
+.header {
+  height: 17vh;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 0 20px;
+  margin-bottom: 18px;
+  margin-left: 10px;
+  margin-right: 5px;
+  box-shadow:
+    0 2px 6px rgba(0,0,0,0.05),
+    0 8px 18px rgba(0,0,0,0.06);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* 🔥 1 SECOND SMOOTH ENTRY */
+  opacity: 0;
+  transform: translateY(-12px);
+  animation: headerEnter 1s ease forwards;
+}
+
+@keyframes headerEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* LEFT */
+.pageTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.parent {
+  color: #1f1f1f;
+  font-weight: 600;
+}
+
+.child {
+  color: #1f1f1f;
+  font-weight: 600;
+}
+
+.separator {
+  color: #1f1f1f;
+}
+
+/* RIGHT */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* COMMON PILL */
+.pill {
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid #e4e2df;
+
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* TIMER GROUP */
+.timerGroup {
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid #e4e2df;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timerGroup span {
+  font-weight: 600;
+}
+
+.timerGroup img {
+  width: 18px;
+  height: 18px;
+  filter: invert(25%);
+}
+
+/* DIVIDER */
+.divider {
+  width: 1px;
+  height: 18px;
+  background: #e4e2df;
+  margin: 0 4px;
+}
+
+/* ICON INSIDE GROUP */
+.iconInside {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+
+.iconInside img {
+  width: 18px;
+  height: 18px;
+  filter: invert(25%);
+}
+
+/* NOTIFICATION */
+.pillIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid #e4e2df;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative; /* 🔥 IMPORTANT */
+}
+
+.pillIcon:hover .redDot {
+  transform: scale(1.1);
+}
+
+
+/* 🔴 Notification red badge */
+.redDot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff3b30;
+
+  box-shadow: 0 0 0 2px #fff; /* white ring like figma */
+}
+
+
+.pillIcon img {
+  width: 18px;
+  height: 18px;
+  filter: invert(25%);
+}
+
+/* AVATAR */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.menuBtn {
+  display: none;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .header{
+    height: 28vh;
+  }
+  .menuBtn {
+    display: block;
+    margin-right: 10px;
+  }
+}

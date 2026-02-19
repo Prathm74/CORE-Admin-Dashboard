@@ -1,0 +1,102 @@
+.card {
+  background: #f7f7f7;
+  border-radius: 18px;
+  padding: 22px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+
+  opacity: 0;
+  transform: translateY(14px);
+  animation: cardEnter 0.5s ease forwards;
+
+  /* 🔥 POLISH */
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+@keyframes cardEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.avatarWrap {
+  position: relative;
+  width: 133px;
+  height: 133px;
+  margin: auto;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* 🔥 Figma style badge position */
+.badgeIcon {
+  position: absolute;
+  right: 0px;
+  bottom: -3px;
+  width: 49px !important;
+  height: 55px !important;
+}
+
+
+.avatarWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  margin-top: 14px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.role {
+  font-size: 13px;
+  color: #8a6c49;
+}
+
+.dots {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* 🔥 Different Colors */
+.dots span:nth-child(1) {
+  background: #FFC83E; /* orange */
+}
+
+.dots span:nth-child(2) {
+  background: #70D32E; /* red */
+}
+
+.dots span:nth-child(3) {
+  background: #6194EC; /* green */
+}
+
+.dots span:nth-child(4) {
+  background: #FB8C3D; /* blue */
+}
+
