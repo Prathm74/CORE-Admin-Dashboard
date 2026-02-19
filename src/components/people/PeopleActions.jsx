@@ -9,7 +9,7 @@ export default function PeopleActions({
   setSort,
   data,
 }) {
-  const [view, setView] = useState("grid"); // 🔥 active toggle
+  const [view, setView] = useState("grid");
 
   const handleDownload = () => {
     const blob = new Blob(
@@ -26,7 +26,6 @@ export default function PeopleActions({
 
   return (
     <div className={styles.wrapper}>
-      {/* SEARCH */}
       <div className={styles.search}>
         <img src={Icons.Search} />
         <input
@@ -36,9 +35,8 @@ export default function PeopleActions({
         />
       </div>
 
-      {/* RIGHT ACTIONS */}
       <div className={styles.actions}>
-        <button>
+        <button onClick={handleDownload}>
           <img src={Icons.Download} />
         </button>
 
@@ -54,7 +52,6 @@ export default function PeopleActions({
           +
         </button>
 
-        {/* 🔥 VIEW GROUP */}
         <div className={styles.viewGroup}>
           <button
             className={

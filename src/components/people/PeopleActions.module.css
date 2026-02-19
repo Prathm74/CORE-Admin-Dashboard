@@ -65,7 +65,6 @@
 
 }
 
-/* VIEW GROUP CONTAINER */
 .viewGroup {
   display: flex;
   gap: 6px;
@@ -76,7 +75,6 @@
 
 }
 
-/* VIEW BUTTON */
 .viewGroup button {
   width: 40px;
   height: 40px;
@@ -92,7 +90,6 @@
   transition: background 0.2s ease;
 }
 
-/* ACTIVE VIEW */
 .viewGroup .active {
   background: #3a3431;
 }

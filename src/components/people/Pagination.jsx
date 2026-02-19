@@ -10,7 +10,6 @@ export default function Pagination({
 
   return (
     <div className={styles.wrapper}>
-      {/* LEFT */}
       <div className={styles.left}>
         <span>Rows per page:</span>
 
@@ -19,7 +18,6 @@ export default function Pagination({
         </select>
       </div>
 
-      {/* CENTER */}
       <div className={styles.center}>
         {`${(page - 1) * perPage + 1}-${Math.min(
           page * perPage,
@@ -27,7 +25,6 @@ export default function Pagination({
         )} of ${total}`}
       </div>
 
-      {/* RIGHT */}
       <div className={styles.right}>
         <button
           disabled={page === 1}

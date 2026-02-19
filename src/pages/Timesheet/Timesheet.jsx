@@ -21,7 +21,6 @@ export default function Timesheet() {
   const [page, setPage] = useState(1);
   const perPage = 8;
 
-  /* 🔥 NEW SORT STATE */
   const [sortConfig, setSortConfig] = useState(null);
 
 
@@ -30,22 +29,18 @@ export default function Timesheet() {
     return () => clearTimeout(t);
   }, []);
 
-  /* 🔥 TIME STRING -> NUMBER */
   const timeToMinutes = (time) => {
     if (!time || time === "-") return 0;
     const [h, m] = time.split(":").map(Number);
     return h * 60 + m;
   };
 
-  /* 🔥 HANDLE SORT CLICK */
   const handleSort = (key) => {
-  setSortConfig((prev) => {
-    // 🔥 FIRST CLICK CASE (prev null)
+  setSortConfig((prev) => {]
     if (!prev || prev.key !== key) {
       return { key, direction: "asc" };
     }
 
-    // 🔥 TOGGLE ASC/DESC
     return {
       key,
       direction: prev.direction === "asc" ? "desc" : "asc",
@@ -54,7 +49,6 @@ export default function Timesheet() {
 };
 
 
-  /* ================= SEARCH + COLUMN SORT ================= */
   const filteredData = useMemo(() => {
     let data = [...timesheetEmployees];
 
@@ -89,13 +83,11 @@ export default function Timesheet() {
     return data;
   }, [search, sortConfig]);
 
-  /* ================= PAGINATION ================= */
   const paginatedData = filteredData.slice(
     (page - 1) * perPage,
     page * perPage
   );
 
-  /* ================= DOWNLOAD CSV ================= */
   const handleDownload = () => {
     const headers = [
       "Employee",
@@ -133,7 +125,6 @@ export default function Timesheet() {
 
   return (
     <div className={styles.wrapper}>
-      {/* ================= TOP BAR ================= */}
       <div className={styles.topBar}>
         <div className={styles.search}>
           <img src={Icons.Search} />
@@ -162,7 +153,6 @@ export default function Timesheet() {
         </div>
       </div>
 
-      {/* ================= STATS (UNCHANGED) ================= */}
       <div className={styles.stats}>
         <div className={styles.statCard}>
           <div className={styles.statIcon}>
@@ -205,7 +195,6 @@ export default function Timesheet() {
         </div>
       </div>
 
-      {/* ================= MUI TABLE ================= */}
       <TableContainer component={Paper} className={styles.table}>
         <Table>
           <TableHead>
@@ -341,7 +330,6 @@ export default function Timesheet() {
         </Table>
       </TableContainer>
 
-      {/* ================= PAGINATION ================= */}
       <Pagination
         page={page}
         setPage={setPage}

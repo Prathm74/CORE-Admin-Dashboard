@@ -9,10 +9,8 @@
   justify-content: space-between;
   color: #fff;
 
-  /* 🔥 PREMIUM DEPTH */
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 
-  /* 🔥 SMOOTH */
   transition:
     width 0.4s ease,
     transform 0.35s ease,
@@ -25,7 +23,6 @@
   width: 90px;
 }
 
-/* LOGO */
 .logoRow {
   display: flex;
   justify-content: space-between;
@@ -55,8 +52,6 @@
   transition: transform 0.4s ease;
 }
 
-
-/* LABEL FADE */
 .label {
   white-space: nowrap;
   opacity: 1;
@@ -68,14 +63,12 @@
   pointer-events: none;
 }
 
-/* NAV */
 .nav {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-/* MENU ITEMS */
 .link {
   height: 44px;
   display: flex;
@@ -107,7 +100,6 @@
   margin-left: auto;
 }
 
-/* ACTIVE */
 .active {
   background: #eceae8;
   color: #8a6c49 !important;
@@ -116,7 +108,6 @@
   transition: background 0.3s ease;
 }
 
-/* LEFT INDICATOR */
 .parentActive::before {
   content: "";
   position: absolute;
@@ -127,7 +118,6 @@
   border-radius: 8px;
 }
 
-/* SUB MENU */
 .subWrapper {
   margin-left: 40px;
   padding-left: 20px;
@@ -180,7 +170,6 @@
   transform: translateX(3px);
 }
 
-/* SETTINGS */
 .settingsContainer {
   height: 48px;
   border-radius: 18px;
@@ -197,7 +186,6 @@
   background: rgba(255,255,255,0.08);
 }
 
-/* KEYFRAMES */
 @keyframes linkEnter {
   to {
     opacity: 1;
@@ -215,8 +203,6 @@
     transform: translateY(0);
   }
 }
-
-/* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
 

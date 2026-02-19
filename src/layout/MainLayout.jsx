@@ -18,7 +18,7 @@ export default function Layout() {
         <Header setMobileOpen={setMobileOpen} />
 
         <div className={styles.content}>
-          <Outlet /> {/* 🔥 THIS WAS MISSING */}
+          <Outlet /> 
         </div>
       </div>
     </div>

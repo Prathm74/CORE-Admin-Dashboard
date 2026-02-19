@@ -24,7 +24,6 @@ export default function Sidebar({ mobileOpen, setMobileOpen }) {
         >
 
             <div>
-                {/* LOGO */}
                 <div className={styles.logoRow}>
                     {!collapsed &&
                         <img
@@ -40,9 +39,9 @@ export default function Sidebar({ mobileOpen, setMobileOpen }) {
                         className={styles.collapseBtn}
                         onClick={() => {
                             if (window.innerWidth <= 768) {
-                                setMobileOpen(false);   // 🔥 MOBILE CLOSE
+                                setMobileOpen(false);   
                             } else {
-                                setCollapsed(!collapsed); // desktop collapse
+                                setCollapsed(!collapsed); 
                             }
                         }}
                     >
@@ -56,7 +55,6 @@ export default function Sidebar({ mobileOpen, setMobileOpen }) {
 
 
                 <nav className={styles.nav}>
-                    {/* HOME */}
                     <div className={styles.link}>
                         <img src={Icons.Home} className={styles.icon} />
                         <span
@@ -67,7 +65,6 @@ export default function Sidebar({ mobileOpen, setMobileOpen }) {
                         </span>
                     </div>
 
-                    {/* MY INFO */}
                     <div className={styles.link}>
                         <img src={Icons.MyInfo} className={styles.icon} />
                         <span
@@ -84,7 +81,6 @@ export default function Sidebar({ mobileOpen, setMobileOpen }) {
                         )}
                     </div>
 
-                    {/* PEOPLE */}
                     <NavLink
                         to="/people"
                         className={({ isActive }) =>
@@ -102,7 +98,6 @@ export default function Sidebar({ mobileOpen, setMobileOpen }) {
                         </span>
                     </NavLink>
 
-                    {/* TEAM MANAGEMENT */}
                     <div
                         className={`${styles.link} ${isTimesheet ? styles.parentActive : ""
                             }`}
@@ -184,8 +179,6 @@ export default function Sidebar({ mobileOpen, setMobileOpen }) {
                         </div>
                     )}
 
-
-                    {/* PROJECT */}
                     <div className={styles.link}>
                         <img src={Icons.Project} className={styles.icon} />
                         <span
@@ -196,7 +189,6 @@ export default function Sidebar({ mobileOpen, setMobileOpen }) {
                         </span>
                     </div>
 
-                    {/* HIRING */}
                     <div className={styles.link}>
                         <img src={Icons.Hiring} className={styles.icon} />
                         <span
@@ -207,7 +199,6 @@ export default function Sidebar({ mobileOpen, setMobileOpen }) {
                         </span>
                     </div>
 
-                    {/* REPORT */}
                     <div className={styles.link}>
                         <img src={Icons.Report} className={styles.icon} />
                         <span
@@ -220,7 +211,6 @@ export default function Sidebar({ mobileOpen, setMobileOpen }) {
                 </nav>
             </div>
 
-            {/* SETTINGS */}
             <div className={styles.settingsContainer}>
                 <img src={Icons.Settings} className={styles.icon} />
                 <span

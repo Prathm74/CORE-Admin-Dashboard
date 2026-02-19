@@ -4,7 +4,6 @@
   border-radius: 22px;
 }
 
-/* TOP BAR */
 .topBar {
   display: flex;
   justify-content: space-between;
@@ -62,7 +61,6 @@
   border: 1px solid #e5e5e5;
 }
 
-/* STATS */
 .stats {
   display: flex;
   padding: 20px 10px;
@@ -71,7 +69,7 @@
 }
 
 .statCard {
-  flex: 1;   /* 🔥 IMPORTANT – sagle equal width ghetil */
+  flex: 1;   
   display: flex;
   flex-direction: column;
   background: white;
@@ -81,8 +79,6 @@
   gap: 20px;
 }
 
-
-/* TABLE */
 .table {
   background: white;
   border-radius: 14px;
@@ -115,7 +111,6 @@
   border-radius: 50%;
 }
 
-/* PAGINATION */
 .pagination {
   margin-top: 14px;
   display: flex;
@@ -142,8 +137,6 @@
   height: 14px;
 }
 
-/* HEADER CELL */
-/* HEADER CELL BASE */
 .headerCell {
   position: relative;
   display: flex;
@@ -154,7 +147,6 @@
   transition: color 0.25s ease;
 }
 
-/* 🔥 UNDERLINE ANIMATION */
 .headerCell::after {
   content: "";
   position: absolute;
@@ -170,14 +162,11 @@
   width: 100%;
 }
 
-
-/* ACTIVE SORT COLOR */
 .activeSort {
   color: #8a6c49;
   font-weight: 600;
 }
 
-/* SORT ICON */
 .sortIcon {
   width: 14px;
   height: 14px;
@@ -185,7 +174,6 @@
   transition: transform 0.3s ease;
 }
 
-/* 🔥 AUTO ROTATE ICON */
 .desc {
   transform: rotate(180deg);
 }
@@ -194,7 +182,6 @@
   border-bottom: 1px solid #f0efed !important;
 }
 
-/* TABLE ROW BASE */
 .tableRow {
   position: relative;
   overflow: hidden;
@@ -203,7 +190,6 @@
   animation: rowFade 0.35s ease forwards;
 }
 
-/* 🔥 RIPPLE OVERLAY */
 .tableRow::before {
   content: "";
   position: absolute;
@@ -217,7 +203,6 @@
   opacity: 1;
 }
 
-/* REMOVE DEFAULT MUI HOVER */
 .MuiTableRow-root:hover {
   background: transparent !important;
 }

@@ -30,7 +30,6 @@ export default function Header({ setMobileOpen }) {
 
   return (
     <div className={styles.header}>
-      {/* MOBILE MENU */}
       <button
         className={styles.menuBtn}
         onClick={() => setMobileOpen(true)}

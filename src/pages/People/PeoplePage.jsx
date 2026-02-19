@@ -17,26 +17,22 @@ export default function PeoplePage() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setLoading(false);
-            setPage(1); // 🔥 reset page on fresh load
+            setPage(1); 
         }, 900);
 
         return () => clearTimeout(timer);
     }, []);
 
-
-    // 🔎 FILTER
     let filtered = peopleData.filter((p) =>
         p.name.toLowerCase().includes(search.toLowerCase())
     );
 
-    // 🔃 SORT
     filtered.sort((a, b) =>
         sort === "asc"
             ? a.name.localeCompare(b.name)
             : b.name.localeCompare(a.name)
     );
 
-    // 📄 PAGINATION SLICE
     const start = (page - 1) * perPage;
     const paginated = filtered.slice(
         start,

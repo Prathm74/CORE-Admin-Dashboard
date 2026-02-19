@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
-import People from "../pages/People/People";
 import Timesheet from "../pages/Timesheet/Timesheet";
 import PeoplePage from "../pages/People/PeoplePage";
 import NotFound from "../pages/NotFound";
